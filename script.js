@@ -6,30 +6,32 @@ let choice = true
 
 registro()
 
-while(choice){
-
+do{
     dados()
     
     function dados(){
         choice = prompt("1 Cadastrar /// 2 Fazer Login /// 3 Encerrar /// 4 Excluir Cadastro")
 
-        if(choice == "1"){
-            registro()
-        }
+        switch(choice){
+            case "1":
+                registro()
+                break;
 
-        if(choice == "2"){
-            login()
-        }
-        if(choice == "3"){
-            finish()
-        }
+            case "2":
+                login()
+                break;
 
-        if(choice == "4"){
-            erase()
-         }
+            case "3":
+                finish()
+                break;
+
+            case "4":
+                erase()
+                break;
+        }
     }
 
-}
+}while(choice)
 
 
 function registro(){
